@@ -281,8 +281,8 @@ LOG_LEVEL=info
 
 | 变量 | 默认值 | 描述 |
 |------|--------|------|
-| `OPENAI_API_KEY` | - | OpenAI API 密钥（必需） |
-| `OPENAI_MODEL` | `gpt-3.5-turbo` | 使用的模型 |
+| `OPENAI_API_KEY` | - | 大模型密钥（本地大模型随便填） |
+| `OPENAI_MODEL` | `Qwen3.5-9B-DeepSeek-V4-Flash-Q4_K_M.gguf` | 本地使用的大模型 |
 | `OPENAI_TEMPERATURE` | `0.7` | 生成温度（0-1） |
 | `AGENT_MAX_ITERATIONS` | `10` | 最大迭代次数 |
 | `PORT` | `3000` | Web 服务器端口 |
@@ -340,6 +340,9 @@ docker run -p 3000:3000 --env-file .env openAgent
 
 ### Q: 如何获取 OpenAI API Key？
 A: 访问 [OpenAI Platform](https://platform.openai.com/)，注册账号后在 API Keys 页面创建。
+
+### Q: 支持本地部署的大模型吗？
+A: 支持，参考.env.example。
 
 ### Q: 支持其他 LLM 吗？
 A: 支持。可以修改 `llm/client.ts` 来适配其他 API（如 Claude、Azure、本地模型等）。
