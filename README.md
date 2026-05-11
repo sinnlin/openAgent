@@ -252,11 +252,16 @@ const weatherTool: Tool = {
 
 ```env
 # OpenAI 配置
-OPENAI_API_KEY=sk-your-api-key-here
-OPENAI_BASE_URL=https://api.openai.com/v1
-OPENAI_MODEL=gpt-3.5-turbo
+OPENAI_API_KEY=sk-your-openai-api-key-here
+OPENAI_BASE_URL=http://localhost:8080/v1
+OPENAI_MODEL=Qwen3.5-9B-DeepSeek-V4-Flash-Q4_K_M.gguf
 OPENAI_TEMPERATURE=0.7
 OPENAI_MAX_TOKENS=2000
+
+# 可选：其他配置
+# OPENAI_ORG_ID=org-xxxxxxxx
+ DEBUG=true
+# LOG_LEVEL=info
 
 # 服务器配置
 PORT=3000
